@@ -14,15 +14,15 @@ gulp.task('browser-sync', () => {
 		notify: false,
 		ghostMode: false
 	})
-})
+});
 
 // Browser Sync Reload
-gulp.task('browser-sync-reload', () => browserSync.reload())
+gulp.task('browser-sync-reload', () => browserSync.reload());
 
 // Default Grunt Task
 gulp.task('default', ['browser-sync'], () => {
 
 	// Watch for all changes in parent directory - then reload
-	gulp.watch('./*', ['browser-sync-reload'])
+	gulp.watch(['./index.html', './app.js'], ['browser-sync-reload'])
 
-})
+});
